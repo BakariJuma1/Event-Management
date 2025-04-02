@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="admin.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#add event">Add Event</a></li>
+        <li><a href="#my events">Manage Events</a></li>
+      </nav>
+    </header>
+
+    <section id="home">
+      <div class="textContainer">
+        <h2 id="heading">WELCOME TO THE HOME</h2>
+        <h2>OF EVENTS</h2>
+        <span>let your event reach your audience</span>
+        <h2>ARE YOU READY?</h2>
+      </div>
+      <button class="btn">Add Event</button>
+    </section>
+
+    <!-- adding event  -->
+    <section id="addEvent">
+      <h1>Add Event</h1>
+      <h4>Ready to add your event?</h4>
+
+      <form action="" class="myForm">
+        <input
+          type="text"
+          id="eventName"
+          class="eventName"
+          placeholder="event name"
+        />
+        <select name="" id="">
+          <option value="" selected>Select Event Category</option>
+          <option value="">Entertainment</option>
+          <option value="">Business</option>
+          <option value="">Education</option>
+          <option value="">Health</option>
+        </select>
+        <input
+          type="datetime-local"
+          id="eventDate"
+          class="eventDate"
+          placeholder="event date"
+        />
+        <input
+          type="text"
+          id="eventLocation"
+          class="eventLocation"
+          placeholder="event location"
+        />
+        <textarea
+          name=""
+          id="eventDescription"
+          placeholder=" event description"
+        ></textarea>
+        <input
+          type="url"
+          id="eventImage"
+          class="eventImage"
+          placeholder="event image"
+        />
+        <input type="submit" value="Add Event" id="lastBtn" />
+      </form>
+    </section>
+
+    <section id="Manage Events">
+      <h3>Manage events</h3>
+
+      <div class="eventsContainer">
+        <div class="eventOne">
+          <img src="" alt="" />
+          <h3>event Name</h3>
+          <span>date&time</span>
+          <span>eventlocation</span>
+          <span>event description</span>
+          <button>delete event</button>
+        </div>
+
+        <div class="eventsContainer">
+            <div class="eventTwo">
+              <img src="" alt="" />
+              <h3>event Name</h3>
+              <span>date&time</span>
+              <span>eventlocation</span>
+              <span>event description</span>
+              <button>delete event</button>
+            </div>
+
+      </div>
+    </section>
+
+    <footer>copyright@bakari juma</footer>
+    <script src="admin.js"></script>
+  </body>
+</html>
