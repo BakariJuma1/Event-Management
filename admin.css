@@ -159,7 +159,24 @@ body {
   padding: 50px 20px;
   background-color: #f9f9f9;
 }
+#addEvent h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+  position: relative;
+}
 
+#addEvent h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: coral;
+}
 .myForm {
   display: flex;
   flex-direction: column;
@@ -231,6 +248,172 @@ body {
   font-weight: bold;
 }
 
+/* MANAGE EVENTS SECTION */
+#manageEvents {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+
+#manageEvents h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+  position: relative;
+}
+
+#manageEvents h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: coral;
+}
+
+.eventsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eventCard {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.eventCard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.eventCard .eventContent {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventCard h3 {
+  font-size: 1.4rem;
+  margin: 0 0 15px 0;
+  color: #333;
+  text-align: left;
+}
+
+.eventCard h3::after {
+  display: none;
+}
+
+.eventCard .eventInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.eventCard .eventInfo i {
+  margin-right: 8px;
+  color: coral;
+  font-size: 1rem;
+}
+
+.eventCard .eventDescription {
+  margin: 15px 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1;
+  /* Limit to 3 lines with ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.eventCard .eventActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.eventCard button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.eventCard .deleteBtn {
+  background-color: #ff4757;
+  color: white;
+}
+
+.eventCard .deleteBtn:hover {
+  background-color: #ff6b81;
+}
+
+.eventCard .editBtn {
+  background-color: #1e90ff;
+  color: white;
+}
+
+.eventCard .editBtn:hover {
+  background-color: #70a1ff;
+}
+
+/* Empty state for when no events exist */
+.noEvents {
+  text-align: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.noEvents p {
+  color: #777;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.noEvents .btn {
+  background-color: coral;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.noEvents .btn:hover {
+  background-color: #ff6a3d;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   #heading {
@@ -257,6 +440,19 @@ body {
   .myForm {
     padding: 20px;
   }
+  .eventsContainer {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  #manageEvents {
+    padding: 40px 15px;
+  }
+
+  #manageEvents h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
 }
 
 /* Added for very small screens */
@@ -276,5 +472,12 @@ body {
 
   #home {
     min-height: 45vh;
+  }
+  .eventsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .eventCard img {
+    height: 160px;
   }
 }

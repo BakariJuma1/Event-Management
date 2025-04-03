@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
     <title>Document</title>
   </head>
   <body>
@@ -27,7 +32,7 @@
 
     <!-- adding event  -->
     <section id="addEvent">
-      <h1>Add Event</h1>
+      <h3>Add Event</h3>
       <h4>Ready to add your event?</h4>
 
       <form action="" class="myForm">
@@ -71,29 +76,76 @@
       </form>
     </section>
 
-    <section id="Manage Events">
-      <h3>Manage events</h3>
+    <section id="manageEvents">
+      <h3>Manage Events</h3>
 
       <div class="eventsContainer">
-        <div class="eventOne">
-          <img src="" alt="" />
-          <h3>event Name</h3>
-          <span>date&time</span>
-          <span>eventlocation</span>
-          <span>event description</span>
-          <button>delete event</button>
-        </div>
+        <!-- Event Card 1 -->
+        <div class="eventCard">
+          <img src="https://via.placeholder.com/300x180" alt="Event Image" />
+          <div class="eventContent">
+            <h3>Tech Conference 2023</h3>
 
-        <div class="eventsContainer">
-            <div class="eventTwo">
-              <img src="" alt="" />
-              <h3>event Name</h3>
-              <span>date&time</span>
-              <span>eventlocation</span>
-              <span>event description</span>
-              <button>delete event</button>
+            <div class="eventInfo">
+              <i class="far fa-calendar"></i>
+              <span>June 15, 2023 • 9:00 AM</span>
             </div>
 
+            <div class="eventInfo">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Convention Center, New York</span>
+            </div>
+
+            <p class="eventDescription">
+              Join us for the biggest tech conference of the year featuring
+              keynotes from industry leaders, workshops, and networking
+              opportunities.
+            </p>
+
+            <div class="eventActions">
+              <button class="editBtn">Edit Event</button>
+              <button class="deleteBtn">Delete Event</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="eventCard">
+          <img src="https://via.placeholder.com/300x180" alt="Event Image" />
+          <div class="eventContent">
+            <h3>Burna Boy in Kenya</h3>
+
+            <div class="eventInfo">
+              <i class="far fa-calendar"></i>
+              <span>July 8-10, 2023 • 10 PM</span>
+            </div>
+
+            <div class="eventInfo">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Talanta hella, Ngong road</span>
+            </div>
+
+            <p class="eventDescription">
+              A night of amazing music performances from top nigerian artist and
+              other talented artists in multiple genres. Food, drinks, and
+              unforgettable experiences.
+            </p>
+
+            <div class="eventActions">
+              <button class="editBtn">Edit Event</button>
+              <button class="deleteBtn">Delete Event</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- You can add more event cards dynamically with JavaScript -->
+      </div>
+
+      <!-- Empty state (show this when no events exist) -->
+
+      <div class="noEvents">
+        <p>You haven't added any events yet.</p>
+        <button class="btn">Add Your First Event</button>
       </div>
     </section>
 
