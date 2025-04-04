@@ -5,13 +5,16 @@
       "name": "Tech Conference 2026",
       "date": "2025-05-10",
       "time": "10:00 AM",
-      "category": "Safaricom",
+      "Category": "Safaricom",
       "location": "Nairobi Convention Center",
       "organizer": "Tech Innovators Kenya",
       "description": "A conference showcasing the latest in technology.",
       "capacity": 200,
       "image": "https://i.pinimg.com/474x/62/84/30/6284302eb52c521fb58822bda42ce599.jpg",
-      "attendees": [1, 2],
+      "attendees": [
+        1,
+        2
+      ],
       "comments": [
         {
           "user": "Jane",
@@ -29,9 +32,13 @@
       "organizer": "AfroBeat Association",
       "description": "A conference showcasing the latest in technology.",
       "image": "https://i.pinimg.com/474x/76/13/d6/7613d6fb06c10b36bba2a295b71a3da0.jpg",
-      "category": "music",
+      "Category": "music",
       "capacity": 1000,
-      "attendees": [3, 4, 5],
+      "attendees": [
+        3,
+        4,
+        5
+      ],
       "comments": [
         {
           "user": "David",
@@ -43,7 +50,7 @@
     {
       "id": "f7ae",
       "name": "The king of vybes is coming",
-      "category": "Entertainment",
+      "Category": "Entertainment",
       "date": "2025-04-04T17:22",
       "organizer": "64 Entertainment",
       "capacity": "200",
@@ -79,6 +86,36 @@
       "image": "https://i.pinimg.com/474x/10/7b/94/107b9405e4090264a89af43a82b2f561.jpg",
       "comments": [],
       "reviews": []
+    },
+    {
+      "id": "692b",
+      "name": "Is it Iron  mIKE",
+      "category": "",
+      "date": "2025-04-10",
+      "time": "10:23",
+      "organizer": "boxing association",
+      "capacity": "5000",
+      "location": "Kasarani,stadium",
+      "description": "You dont want to  miss this one fist for fist",
+      "image": "https://i.pinimg.com/474x/fa/e6/df/fae6dfe2863af1be75ea57f9ba9fab90.jpg",
+      "comments": [],
+      "reviews": [],
+      "Category": "sports"
+    },
+    {
+      "id": "a683",
+      "name": "Across East Africa",
+      "category": "",
+      "date": "2025-04-01",
+      "time": "12:57",
+      "organizer": "64 Entertainment",
+      "capacity": "12",
+      "location": "kenya,uganda,tanzania",
+      "description": "lets travel eastafrica \ndrinks and meals will be offered \ncome one come all",
+      "image": "https://i.pinimg.com/736x/a9/40/31/a94031cf7afdabfd67e5defaec8f6fdb.jpg",
+      "comments": [],
+      "reviews": [],
+      "Category": "travel"
     }
   ],
   "users": [

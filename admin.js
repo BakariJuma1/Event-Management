@@ -135,11 +135,13 @@ function editEvent(id, eventData) {
     "Enter new event category",
     eventData.Category
   );
+  const updatedDate = prompt("Enter new event date", eventData.date);
   // this one ensures  it updates the event with the new name and category or leve it if nothing is changed
   const updatedEvent = {
     ...eventData,
     name: updatedName || eventData.name,
-    Category: updatedCategory || eventData.Category,
+    category: updatedCategory || eventData.category,
+    date: updatedDate || eventData.date,
   };
 
   console.log("editbutton clicked");
@@ -151,7 +153,7 @@ function editEvent(id, eventData) {
     .then((res) => res.json())
     .then((events) => {
       alert("event updated successfuly");
-      console.log("event updated");
+      console.log(events);
       displayEvent();
     });
 }
