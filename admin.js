@@ -104,13 +104,8 @@ function displayEvent() {
           </div>
 
         `;
-        // eventContainer.innerHTML += eventCard.innerHTML;
+
         eventContainer.appendChild(eventCard);
-        // console.log(eventCard.innerHTML);
-        // editButton();
-        // console.log("edit button clicked");
-        // deleteButton();
-        // console.log("delete button clicked");
         const editBtn = eventCard.querySelector(".editBtn");
         console.log(editBtn);
         editBtn.addEventListener("click", () => {
@@ -126,40 +121,51 @@ function displayEvent() {
       });
     });
 }
-function editButton() {
+
+function editEvent(id, eventData) {
   const btn = document.querySelector(".editBtn");
   console.log(btn);
 
-  btn.addEventListener("click", () => {
-    console.log("editbutton clicked");
-    fetch("http://localhost:3001/events", {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name,
-        Category,
-        date,
-        organiser,
-        capacity,
-        location,
-        description,
-      }),
-    })
-      .then((res) => res.json())
-      .then((events) => {
-        alert("event updated successfuly");
-        console.log("event updated");
-      });
-  });
+  //propmt user to update the event
+  const updatedName = prompt("Enter new event name", eventData.name);
+  const updatedCategory = prompt(
+    "Enter new event category",
+    eventData.Category
+  );
+  // this one ensures  it updates the event with the new name and category or leve it if nothing is changed
+  const updatedEvent = {
+    ...eventData,
+    name: updatedName || eventData.name,
+    Category: updatedCategory || eventData.Category,
+  };
+
+  console.log("editbutton clicked");
+  fetch(`http://localhost:3001/events/${id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(updatedEvent),
+  })
+    .then((res) => res.json())
+    .then((events) => {
+      alert("event updated successfuly");
+      console.log("event updated");
+      displayEvent();
+    });
 }
 
-function deleteButton() {
-  const deleteBtn = eventCard.querySelector(".deleteBtn");
-  console.log(deleteBtn);
-  deleteBtn.addEventListener("click", () => {
-    const eventId = document.querySelector(".deleteBtn").dataset.id;
-    console.log(eventId);
-    console.log("delete button clicked");
-    fetch("http://localhost:3001/events");
+function deleteEvent(id) {
+  const confirmDelete = confirm("Are you sure you want to delete this event?"); //propmt user to confirm delete
+  //if user cancels delete it stops if ok it continues
+  if (!confirmDelete) {
+    return;
+  }
+  fetch("http://localhost:3001/events/${id}", {
+    method: "DELETE",
+  }).then((res) => {
+    if (res.ok) {
+      alert("event deleted successfuly");
+      console.log("event deleted");
+      displayEvent();
+    }
   });
 }
