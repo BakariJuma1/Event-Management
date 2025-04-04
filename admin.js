@@ -19,6 +19,7 @@ function addEvent() {
     const capacity = document.getElementById("eventCapacity").value;
     const location = document.getElementById("eventLocation").value;
     const description = document.getElementById("eventDescription").value;
+    const image = document.getElementById("eventImage").value;
 
     //create a new event\
     const newEvent = {
@@ -29,6 +30,7 @@ function addEvent() {
       capacity,
       location,
       description,
+      image,
       comments: [],
       reviews: [],
     };
@@ -57,6 +59,7 @@ function displayEvent() {
 
       //   eventCard.innerHTML = "";
       eventContainer.innerHTML = ""; //clear the event container
+
       events.forEach((event) => {
         const eventCard = document.createElement("div");
         eventCard.classList.add("eventCard");
@@ -101,10 +104,25 @@ function displayEvent() {
           </div>
 
         `;
-        eventContainer.innerHTML += eventCard.innerHTML;
-        console.log(eventCard.innerHTML);
-        editButton();
-        // eventContainer.appendChild(eventCard);
+        // eventContainer.innerHTML += eventCard.innerHTML;
+        eventContainer.appendChild(eventCard);
+        // console.log(eventCard.innerHTML);
+        // editButton();
+        // console.log("edit button clicked");
+        // deleteButton();
+        // console.log("delete button clicked");
+        const editBtn = eventCard.querySelector(".editBtn");
+        console.log(editBtn);
+        editBtn.addEventListener("click", () => {
+          editEvent(event.id, event);
+          console.log("edit button clicked");
+        });
+        const deleteBtn = eventCard.querySelector(".deleteBtn");
+        console.log(deleteBtn);
+        deleteBtn.addEventListener("click", () => {
+          deleteEvent(event.id);
+          console.log("delete button clicked");
+        });
       });
     });
 }
@@ -132,5 +150,16 @@ function editButton() {
         alert("event updated successfuly");
         console.log("event updated");
       });
+  });
+}
+
+function deleteButton() {
+  const deleteBtn = eventCard.querySelector(".deleteBtn");
+  console.log(deleteBtn);
+  deleteBtn.addEventListener("click", () => {
+    const eventId = document.querySelector(".deleteBtn").dataset.id;
+    console.log(eventId);
+    console.log("delete button clicked");
+    fetch("http://localhost:3001/events");
   });
 }
