@@ -5,16 +5,13 @@
       "name": "Tech Conference 2026",
       "date": "2025-05-10",
       "time": "10:00 AM",
-      "Category": "Safaricom",
+      "category": "Safaricom",
       "location": "Nairobi Convention Center",
       "organizer": "Tech Innovators Kenya",
       "description": "A conference showcasing the latest in technology.",
       "capacity": 200,
       "image": "https://i.pinimg.com/474x/62/84/30/6284302eb52c521fb58822bda42ce599.jpg",
-      "attendees": [
-        1,
-        2
-      ],
+      "attendees": [1, 2],
       "comments": [
         {
           "user": "Jane",
@@ -32,13 +29,9 @@
       "organizer": "AfroBeat Association",
       "description": "A conference showcasing the latest in technology.",
       "image": "https://i.pinimg.com/474x/76/13/d6/7613d6fb06c10b36bba2a295b71a3da0.jpg",
-      "Category": "music",
+      "category": "music",
       "capacity": 1000,
-      "attendees": [
-        3,
-        4,
-        5
-      ],
+      "attendees": [3, 4, 5],
       "comments": [
         {
           "user": "David",
@@ -50,7 +43,7 @@
     {
       "id": "f7ae",
       "name": "The king of vybes is coming",
-      "Category": "Entertainment",
+      "category": "Entertainment",
       "date": "2025-04-04T17:22",
       "organizer": "64 Entertainment",
       "capacity": "200",
@@ -76,7 +69,7 @@
     {
       "id": "460b",
       "name": "Wanafunzi Wasome ",
-      "Category": "",
+      "Category": "Education",
       "date": "2025-04-09",
       "time": "09:00",
       "organizer": "Ministry of Education",

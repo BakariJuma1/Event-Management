@@ -3,19 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Event Management</title>
+    <link rel="stylesheet" href="user.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Event Management user</title>
   </head>
   <body>
     <header>
       <nav class="nav">
         <li><a href="#home">Home</a></li>
-        <li><a href="#add event">Add Event</a></li>
-        <li><a href="#my events">Manage Events</a></li>
+        <li><a href="#upcoming event">Upcoming Events</a></li>
+        <li><a href="#past events">Past Events</a></li>
       </nav>
     </header>
-    <section class="myEvents"></section>
-    <section class="eventBooking"></section>
+
+    <!--  -->
+    <section id="home">
+      <div class="textContainer">
+        <h2 id="heading">WELCOME TO THE HOME</h2>
+        <h2>OF EVENTS</h2>
+        <span>Stay in touch with ongoing events</span>
+        <h2>Book your event now</h2>
+      </div>
+      <button class="btn" id="goEvent">Book Event</button>
+    </section>
+
+    <!-- my event section -->
+    <section id="myEvents">
+      <h3>Upcoming Events</h3>
+
+      <div class="eventsContainer">
+        <!-- Event Card 1 -->
+        <div class="eventCard">
+          <img src="" alt="Event Image" />
+          <div class="eventContent">
+            <h3>Tech Conference 2023</h3>
+
+            <div class="eventInfo">
+              <i class="far fa-calendar"></i>
+              <span>June 15, 2023 • 9:00 AM</span>
+            </div>
+
+            <div class="eventInfo">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Convention Center, New York</span>
+            </div>
+
+            <p class="eventDescription">
+              Join us for the biggest tech conference of the year featuring
+              keynotes from industry leaders, workshops, and networking
+              opportunities.
+            </p>
+
+            <div class="eventActions">
+              <button class="editBtn">Book Event</button>
+              <button class="deleteBtn">Delete Event</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="eventCard">
+          <img src="" alt="Event Image" />
+          <div class="eventContent">
+            <h3>Burna Boy in Kenya</h3>
+
+            <div class="eventInfo">
+              <i class="far fa-calendar"></i>
+              <span>July 8-10, 2023 • 10 PM</span>
+            </div>
+
+            <div class="eventInfo">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Talanta hella, Ngong road</span>
+            </div>
+
+            <p class="eventDescription">
+              A night of amazing music performances from top nigerian artist and
+              other talented artists in multiple genres. Food, drinks, and
+              unforgettable experiences.
+            </p>
+
+            <div class="eventActions">
+              <button class="editBtn">Book Event</button>
+              <!-- <button class="deleteBtn">Delete Event</button> -->
+            </div>
+            <!-- style="display: none; -->
+            <div class="moreContent" ">
+            <form action="" class="myForm">
+              <input type="text" placeholder="Enter your name" id="name" />
+              <input type="email" placeholder="Enter your email" id="email" />
+              <input
+                type="text"
+                placeholder="Enter your phone number"
+                id="phoneNumber"
+              />
+              <input
+                type="number"
+                placeholder="Enter the number of tickets"
+                id="numberTickets"
+              />
+              <label for="terms">I agree to the terms and conditions</label>
+              <br />
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                value="terms"
+                required
+              />
+              <input type="submit" value="Book Event" id="lastBtn" />
+            </form>
+            <a href=""></a>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="pastEvents"></section>
     <footer>copyright@bakari juma</footer>
     <script src="index.js"></script>

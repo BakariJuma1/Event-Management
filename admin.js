@@ -14,7 +14,7 @@ function addEvent() {
     console.log("clicked");
 
     const name = document.getElementById("eventName").value;
-    const Category = document.getElementById("category").value;
+    const category = document.getElementById("category").value;
     const date = document.getElementById("eventDate").value;
     const time = document.getElementById("eventTime").value;
     const organizer = document.getElementById("eventOrganiser").value;
@@ -26,7 +26,7 @@ function addEvent() {
     //create a new event\
     const newEvent = {
       name,
-      Category,
+      category,
       date,
       time,
       organizer,
@@ -75,7 +75,7 @@ function displayEvent() {
 
             <div class="eventInfo">
               <i class="far fa-calendar"></i>
-              <span>${event.date || "No date"} • ${event.time || ""}</span>
+              <span>${event.date || "No date"} •   ${event.time || ""}</span>
             </div>
 
             <div class="eventInfo">
@@ -92,7 +92,7 @@ function displayEvent() {
             </div>
             <div class="eventInfo">
               <i class="fas fa-tags"></i>
-              <span>${event.Category || "No Category Chosen"}</span>
+              <span>${event.category || "No Category Chosen"}</span>
             </div>
             <p class="eventDescription">
               ${event.description || "No description"}
