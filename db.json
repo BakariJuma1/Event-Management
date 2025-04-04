@@ -5,7 +5,7 @@
       "name": "Tech Conference 2026",
       "date": "2025-05-10",
       "time": "10:00 AM",
-      "Category": "technology in kenya",
+      "Category": "Safaricom",
       "location": "Nairobi Convention Center",
       "organizer": "Tech Innovators Kenya",
       "description": "A conference showcasing the latest in technology.",
@@ -46,6 +46,32 @@
           "rating": 4
         }
       ]
+    },
+    {
+      "id": "f7ae",
+      "name": "The king of vybes is coming",
+      "Category": "Entertainment",
+      "date": "2025-04-04T17:22",
+      "organizer": "64 Entertainment",
+      "capacity": "200",
+      "location": "club habanos ",
+      "description": "its bad you dont want to miss this one ",
+      "image": "https://yt3.googleusercontent.com/T3oKb8lp8J5TxMq0LrgVsqkympjHhtVCDQkeGrDX5UB6FtMQVV_Ih2odWn8GjvjEhJUxk6P1rr8=s160-c-k-c0x00ffffff-no-rj",
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "id": "33ae",
+      "name": "Annual NCA Building Gala",
+      "Category": "building and construction ",
+      "date": "2025-04-18T18:28",
+      "organizer": "National Construction Authority",
+      "capacity": "200",
+      "location": "kakamega",
+      "description": "All contractors are invited to this gala where they get to learn different things ",
+      "image": "https://i.pinimg.com/474x/fd/fd/b7/fdfdb77d0ac2d5926d4cc6b9a6c3fdb6.jpg",
+      "comments": [],
+      "reviews": []
     }
   ],
   "users": [

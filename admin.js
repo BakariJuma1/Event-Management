@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   addEvent(); //add an event
   displayEvent(); //display all events
+  btnScroll();
 });
 
 //This function adds an event to the database
@@ -15,7 +16,7 @@ function addEvent() {
     const name = document.getElementById("eventName").value;
     const Category = document.getElementById("category").value;
     const date = document.getElementById("eventDate").value;
-    const organiser = document.getElementById("eventOrganiser").value;
+    const organizer = document.getElementById("eventOrganiser").value;
     const capacity = document.getElementById("eventCapacity").value;
     const location = document.getElementById("eventLocation").value;
     const description = document.getElementById("eventDescription").value;
@@ -26,7 +27,7 @@ function addEvent() {
       name,
       Category,
       date,
-      organiser,
+      organizer,
       capacity,
       location,
       description,
@@ -81,7 +82,7 @@ function displayEvent() {
             </div>
             <div class="eventInfo">
               <i class="fas fa-user"></i>
-              <span>${event.organizer}</span>
+              <span>${event.organizer || "No organisers"}</span>
             </div>
             <div class="eventInfo">
               <i class="fas fa-users"></i>
@@ -89,7 +90,7 @@ function displayEvent() {
             </div>
             <div class="eventInfo">
               <i class="fas fa-tags"></i>
-              <span>${event.Category || "No organiser"}</span>
+              <span>${event.Category || "No Category Chosen"}</span>
             </div>
             <p class="eventDescription">
               ${event.description || "No description"}
@@ -159,7 +160,7 @@ function deleteEvent(id) {
   if (!confirmDelete) {
     return;
   }
-  fetch("http://localhost:3001/events/${id}", {
+  fetch(`http://localhost:3001/events/${id}`, {
     method: "DELETE",
   }).then((res) => {
     if (res.ok) {
@@ -167,5 +168,17 @@ function deleteEvent(id) {
       console.log("event deleted");
       displayEvent();
     }
+  });
+}
+//button scroll
+function btnScroll() {
+  const scrollBtn = document.getElementById("goEvent");
+  scrollBtn.addEventListener("click", () => {
+    const section = document.getElementById("addEvent");
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+    console.log("scroll button clicked");
   });
 }
