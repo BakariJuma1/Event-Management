@@ -16,6 +16,7 @@ function addEvent() {
     const name = document.getElementById("eventName").value;
     const Category = document.getElementById("category").value;
     const date = document.getElementById("eventDate").value;
+    const time = document.getElementById("eventTime").value;
     const organizer = document.getElementById("eventOrganiser").value;
     const capacity = document.getElementById("eventCapacity").value;
     const location = document.getElementById("eventLocation").value;
@@ -27,6 +28,7 @@ function addEvent() {
       name,
       Category,
       date,
+      time,
       organizer,
       capacity,
       location,
