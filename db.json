@@ -116,6 +116,20 @@
       "comments": [],
       "reviews": [],
       "Category": "travel"
+    },
+    {
+      "id": "9959",
+      "name": "WRC safari rally",
+      "category": "",
+      "date": "2025-03-22",
+      "time": "09:20",
+      "organizer": "WRC",
+      "capacity": "40000",
+      "location": "Hells gate",
+      "description": "mad for fun at its best \nan experience not to miss",
+      "image": "https://i.pinimg.com/736x/48/d6/8b/48d68b27355a6c54f46d2a11b6b8838c.jpg",
+      "comments": [],
+      "reviews": []
     }
   ],
   "users": [
